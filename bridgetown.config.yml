@@ -1,0 +1,14 @@
+baseurl: ""
+url: "https://chiefpansancolt.live"
+
+permalink: simple
+timezone: America/New_York
+
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
+
+svg:
+  optimize: true

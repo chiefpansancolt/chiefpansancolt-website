@@ -1,0 +1,30 @@
+# Bridgetown
+output
+.bridgetown-cache
+.bridgetown-metadata
+.bridgetown-webpack
+
+# Dependency folders
+node_modules
+
+# Caches
+.sass-cache
+.npm
+.node_repl_history
+
+# Ignore bundler config.
+/.bundle
+
+# dotenv environment variables file
+.env
+
+# Mac files
+.DS_Store
+
+# Yarn
+yarn-error.log
+yarn-debug.log*
+.pnp/
+.pnp.js
+# Yarn Integrity file
+.yarn-integrity

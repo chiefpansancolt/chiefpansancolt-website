@@ -1,0 +1,25 @@
+extends: google
+globals:
+  goog: false
+env:
+  browser: true
+parserOptions:
+  ecmaVersion: 2017 # Enable async/await support in Node scripts
+  sourceType: module
+rules:
+  indent: [error, 2]
+  max-len: [error, 120]
+  quotes: [error, single, {"avoidEscape": true}]
+  no-var: 0
+  new-cap: 0
+  curly: error
+  eol-last: [error, "always"]
+  no-floating-decimal: error
+  no-unused-vars:
+    - error
+    - varsIgnorePattern: ^(?:(?:MDC(?:(?:[A-Z][a-z0-9]+)+)Adapter)|(?:(?:(?:[A-Z][a-z0-9]+)+)Type))$
+
+  require-jsdoc: 0
+  valid-jsdoc: 0
+
+  prefer-const: error
