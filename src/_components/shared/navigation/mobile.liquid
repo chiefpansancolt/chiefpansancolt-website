@@ -13,7 +13,7 @@ variables:
         - The page object
 ---
 
-<div class="absolute z-20 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden" data-toggle-name="mobile-menu" >
+<div class="hidden absolute z-20 top-0 inset-x-0 p-2 transition transform origin-top-right" data-toggle-name="mobile-menu" >
     <div class="rounded-lg shadow-lg">
         <div class="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
             <div class="pt-5 pb-6 space-y-6 sm:space-y-8 sm:pb-8">
@@ -33,7 +33,7 @@ variables:
                     <nav class="space-y-8">
                         <div class="grid gap-2 sm:grid-cols-2 sm:row-gap-2 sm:col-gap-2">
                             {% for item in top %}
-                                {% render "shared/navigation/navs", name: item.name, mobile: true, top: true, url: item.link %}
+                                {% render "shared/navigation/navs", name: item.name, mobile: true, top: true, url: item.link, page_url: page.url %}
                             {% endfor %}
                         </div>
                     </nav>
@@ -51,6 +51,19 @@ variables:
                             Contact
                         </a>
                     </span>
+                    <div class="flex-1 flex items-center justify-center">
+                        <div class="max-w-lg w-full lg:max-w-xs">
+                            <label for="search" class="sr-only">Search</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                {% render "bridgetown_quick_search/search", placeholder: "Search", input_class: "block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 sm:text-sm transition duration-150 ease-in-out" %}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
