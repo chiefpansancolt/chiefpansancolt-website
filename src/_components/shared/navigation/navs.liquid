@@ -1,0 +1,93 @@
+---
+name: Nav Links
+description: Navigation links
+variables:
+    mobile:
+        - boolean
+        - Indicates whether to use mobile styling
+    url:
+        - url
+        - The url for the link
+    name:
+        - string
+        - The content for the link
+    page_url:
+        - url
+        - The url of the current page
+    first:
+        - boolean
+        - indicates first in list
+    type:
+        - string
+        - inidcates if it is a button or link
+    dropdown:
+        - string
+        - name of the click tag
+    dropdown_in:
+        - boolean
+        - determines if the dropdown is inside
+    video:
+        - data
+        - video navigation links
+    top:
+        - boolean
+        - mobile top section
+---
+
+{% if mobile %}
+    {% if top %}
+        {% if url == page_url %}
+            <a href="{{ url }}" class="block pl-3 pr-4 py-2 border-l-4 border-blue-700 text-base font-medium text-blue-900 bg-blue-100 focus:outline-none focus:text-blue-800 focus:bg-blue-100 focus:border-blue-700 transition duration-150 ease-in-out">
+                {{ name }}
+            </a>
+        {% else %}
+            <a href="{{ url }}" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+                {{ name }}
+            </a>
+        {% endif %}
+    {% else %}
+        <a href="{{ url }}" class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-600 transition ease-in-out duration-150">
+            {{ name }}
+        </a>
+    {% endif %}
+{% else %}
+    {% if type == "link" %}
+        {% if first %}
+            {% if url != page_url %}
+                <a href="{{ url }}" class="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-secondary focus:outline-none focus:text-white hover:outline-none hover:bg-accent transition duration-150 ease-in-out">
+                    {{ name }}
+                </a>
+            {% else %}
+                <a href="{{ url }}" class="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-primary focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+                    {{ name }}
+                </a>
+            {% endif %}
+        {% else %}
+            {% if url != page_url %}
+                <a href="{{ url }}" class="ml-2 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-secondary focus:outline-none focus:text-white hover:outline-none hover:bg-accent transition duration-150 ease-in-out">
+                    {{ name }}
+                </a>
+            {% else %}
+                <a href="{{ url }}" class="ml-2 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-primary focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+                    {{ name }}
+                </a>
+            {% endif %}
+        {% endif %}
+    {% elsif type == "button" %}
+        <div class="relative">
+            <button data-action="click->toggle#toggle touch->toggle#toggle" data-toggle-target="{{ dropdown }}-menu,{{ dropdown }}-open,{{ dropdown }}-closed" type="button" class="ml-2 px-3 py-2 rounded-md text-sm font-medium leading-5 inline-flex items-center space-x-2 text-white bg-secondary focus:outline-none focus:text-white hover:outline-none hover:bg-accent transition duration-150 ease-in-out">
+                <span>{{ name }}</span>
+                <svg data-toggle-name="{{ dropdown }}-open" class="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+                <svg data-toggle-name="{{ dropdown }}-closed" class="hidden text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+
+            {% if dropdown_in and dropdown == "video_panel" %}
+                {% render "shared/navigation/video_panel", video: video %}
+            {% endif %}
+        </div>
+    {% endif %}
+{% endif %}

@@ -1,17 +1,44 @@
-$body-background: #fafafa;
-$body-color: #444;
+/* purgecss start ignore */
+@import "tailwindcss/base";
+
+/* purgecss end ignore */
 
 body {
-  background: $body-background;
-  color: $body-color;
-  font-family: sans-serif;
-}
-
-h1, nav, footer {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-  margin: 4rem auto;
-  max-width: 60rem;
+  flex: 1;
 }
+
+.h-100 {
+  height: 100px;
+}
+
+.prose {
+  max-width: none !important;
+}
+
+.bg-secondary {
+  background-color: #56437C;
+}
+
+.bg-primary {
+  background-color: #3091BC;
+}
+
+.bg-accent {
+  background-color: #6193AE;
+}
+
+@variants hover {
+  .bg-accent {
+    background-color: #6193AE;
+  }
+}
+
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://rsms.me/inter/inter.css");

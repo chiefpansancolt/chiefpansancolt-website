@@ -1,15 +1,24 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    {% render "head", metadata: site.metadata, title: page.title %}
-  </head>
-  <body class="{{ page.layout }} {{ page.page_class }}">
-    {% render "navbar", metadata: site.metadata, page: page %}
+    <head>
+        {% render "shared/head", metadata: site.metadata, title: page.title %}
+    </head>
+    <body class="{{ page.layout }} {{ page.page_class }}">
+        {% render "shared/navbar",
+            metadata: site.metadata,
+            navigation: site.data.navigation.main, 
+            ruby_gems: site.data.navigation.docs.ruby_gems,
+            salesforce: site.data.navigation.docs.salesforce,
+            video: site.data.navigation.video,
+            mobile_top: site.data.navigation.mobile.top,
+            mobile_bottom: site.data.navigation.mobile.bottom,
+            page: page 
+        %}
 
-    <main>
-      {{ content }}
-    </main>
+        <main>
+            {{ content }}
+        </main>
 
-    {% render "footer", metadata: site.metadata %}
-  </body>
+        {% render "shared/footer", metadata: site.metadata %}
+    </body>
 </html>

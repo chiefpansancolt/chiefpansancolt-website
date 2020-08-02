@@ -1,0 +1,71 @@
+---
+name: Docs Panel
+description: The docs navigation bar
+variables:
+    metadata:
+        - data
+        - metadata for the site
+    ruby_gems:
+        - data
+        - The navigation links
+    salesforce:
+        - data
+        - The navigation links
+---
+
+<div data-toggle-name="docs_panel-menu" class="hidden absolute inset-x-0 transform shadow-lg">
+    <div class="absolute inset-0 flex">
+        <div class="bg-white w-1/2"></div>
+        <div class="bg-gray-50 w-1/2"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2">
+        <nav class="grid row-gap-10 px-4 py-8 bg-white sm:grid-cols-2 sm:col-gap-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12">
+            <div class="space-y-5">
+                <h3 class="text-sm leading-5 font-medium tracking-wide text-gray-500 uppercase">
+                    Ruby Gems
+                </h3>
+                <ul class="space-y-6">
+                    {% for item in ruby_gems %}
+                        <li class="flow-root">
+                            <a href="{{ item.link }}" class="-m-3 p-3 flex items-center space-x-4 rounded-md text-base leading-6 font-medium text-gray-900 hover:bg-gray-50 transition ease-in-out duration-150">
+                                {{ item.name}}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="space-y-5">
+                <h3 class="text-sm leading-5 font-medium tracking-wide text-gray-500 uppercase">
+                    Salesforce Packages
+                </h3>
+                <ul class="space-y-6">
+                    {% for item in salesforce %}
+                        <li class="flow-root">
+                            <a href="{{ item.link }}" class="-m-3 p-3 flex items-center space-x-4 rounded-md text-base leading-6 font-medium text-gray-900 hover:bg-gray-50 transition ease-in-out duration-150">
+                                {{ item.name}}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </nav>
+        <div class="space-y-6 bg-gray-50 px-4 py-8 sm:py-12 sm:px-6 lg:px-8 xl:pl-12">
+            <div class="space-y-6">
+                <h3 class="text-sm leading-5 font-medium tracking-wide text-gray-500 uppercase">
+                    How to Support
+                </h3>
+                <p class="space-y-6">
+                    If you wish to support any of my development projects there are many ways to help, by contributng to help maintain the repos through pull requests or by becoming a sponsor on github.
+                </p>
+            </div>
+            <div class="text-sm leading-5 font-medium inline-flex rounded-md shadow-sm">
+                <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
+                    Sponsor
+                    <svg class="ml-2 -mr-0.5 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

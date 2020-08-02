@@ -1,0 +1,76 @@
+main:
+  - name: Home
+    link: /
+    type: link
+    first: true
+  - name: Schedule
+    link: /schedule/
+    type: link
+    first: false
+  - name: Videos
+    link: ""
+    type: button
+    dropdown: video_panel
+    first: false
+    in: true
+  - name: Blog
+    link: /blog/
+    type: link
+    first: false
+  - name: Documentation
+    link: ""
+    type: button
+    dropdown: docs_panel
+    in: false
+    first: false
+  - name: Contact
+    link: /contact/
+    type: link
+    first: false
+
+video:
+  - name: Video Game Series
+    link: /gaming/
+    description: Checkout some of Chief's best games or crazy games played!
+  - name: Gaming Clips
+    link: /clips/
+    description: Checkout some of Chief's crazy clips!
+  - name: How To Video Series
+    link: /how_tos/
+    description: Check out Videos of different How To's
+
+docs:
+  ruby_gems:
+    - name: Simplecov Material
+      link: /simplecov_material/
+    - name: Simple Form Materialize
+      link: /simple_form_materialize/
+    - name: Devise Materialize
+      link: /devise_materialize/
+  salesforce:
+    - name: Package Builder
+      link: /package_builder/
+
+mobile:
+  top:
+    - name: Home
+      link: /
+    - name: Schedule
+      link: /schedule/
+    - name: Blog
+      link: /blog/
+  bottom:
+    - name: Simplecov Material
+      link: /simplecov_material/
+    - name: Simple Form Materialize
+      link: /simple_form_materialize/
+    - name: Devise Materialize
+      link: /devise_materialize/
+    - name: Package Builder
+      link: /package_builder/
+    - name: Video Game Series
+      link: /gaming/
+    - name: Gaming Clips
+      link: /clips/
+    - name: How To Video Series
+      link: /how_tos/
