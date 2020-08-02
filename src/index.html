@@ -1,27 +1,88 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-
 layout: home
 ---
 
-<!-- Replace with your content -->
-<div class="bg-white rounded-lg shadow px-5 py-6 sm:px-6">
-    <div class="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
+<div class="bg-white rounded-lg shadow">
+    <div id="twitch-embed" class="rounded-lg h-120"></div>
 </div>
-<!-- /End replace -->
 
-<!-- {% render "shared/navbar",
-            metadata: site.metadata,
-            navigation: site.data.navigation.main, 
-            ruby_gems: site.data.navigation.docs.ruby_gems,
-            salesforce: site.data.navigation.docs.salesforce,
-            video: site.data.navigation.video,
-            mobile_top: site.data.navigation.mobile.top,
-            mobile_bottom: site.data.navigation.mobile.bottom,
-            page: page 
-        %} -->
-
-
+<div class="mt-20" id="schedule">
+    <div class="text-center prose-2xl pt-10">
+        <h3>Schedule</h3>
+    </div>
+    <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-8">
+        <li class="col-span-1 bg-primary rounded-lg shadow">
+            <div class="w-full flex items-center p-6 space-x-6">
+                <div class="flex-1 truncate">
+                    <div class="flex items-center">
+                        <h3 class="text-gray-100 text-sm leading-5 font-medium truncate">Monday</h3>
+                    </div>
+                    <p class="mt-1 text-white text-sm leading-5 truncate">Evening - 8pm EST</p>
+                </div>
+            </div>
+        </li>
+        <li class="col-span-1 bg-primary rounded-lg shadow">
+            <div class="w-full flex items-center p-6 space-x-6">
+                <div class="flex-1 truncate">
+                    <div class="flex items-center">
+                        <h3 class="text-gray-100 text-sm leading-5 font-medium truncate">Tuesday</h3>
+                    </div>
+                    <p class="mt-1 text-white text-sm leading-5 truncate">Evening - 8pm EST</p>
+                </div>
+            </div>
+        </li>
+        <li class="col-span-1 bg-primary rounded-lg shadow">
+            <div class="w-full flex items-center p-6 space-x-6">
+                <div class="flex-1 truncate">
+                    <div class="flex items-center">
+                        <h3 class="text-gray-100 text-sm leading-5 font-medium truncate">Wednesday</h3>
+                    </div>
+                    <p class="mt-1 text-white text-sm leading-5 truncate">Evening - 8pm EST</p>
+                </div>
+            </div>
+        </li>
+        <li class="col-span-1 bg-primary rounded-lg shadow">
+            <div class="w-full flex items-center p-6 space-x-6">
+                <div class="flex-1 truncate">
+                    <div class="flex items-center">
+                        <h3 class="text-gray-100 text-sm leading-5 font-medium truncate">Thursday</h3>
+                    </div>
+                    <p class="mt-1 text-white text-sm leading-5 truncate">Evening - 8pm EST</p>
+                </div>
+            </div>
+        </li>
+        <li class="col-span-1 bg-primary rounded-lg shadow">
+            <div class="w-full flex items-center p-6 space-x-6">
+                <div class="flex-1 truncate">
+                    <div class="flex items-center">
+                        <h3 class="text-gray-100 text-sm leading-5 font-medium truncate">Friday</h3>
+                    </div>
+                    <p class="mt-1 text-white text-sm leading-5 truncate">Evening - 8pm EST</p>
+                </div>
+            </div>
+        </li>
+        <li class="col-span-1 bg-primary rounded-lg shadow">
+            <div class="w-full flex items-center p-6 space-x-6">
+                <div class="flex-1 truncate">
+                    <div class="flex items-center">
+                        <h3 class="text-gray-100 text-sm leading-5 font-medium truncate">Saturday</h3>
+                    </div>
+                    <p class="mt-1 text-white text-sm leading-5 truncate">Evening - 8pm EST</p>
+                </div>
+            </div>
+        </li>
+        <li class="col-span-1 bg-primary rounded-lg shadow">
+            <div class="w-full flex items-center p-6 space-x-6">
+                <div class="flex-1 truncate">
+                    <div class="flex items-center">
+                        <h3 class="text-gray-100 text-sm leading-5 font-medium truncate">Sunday</h3>
+                    </div>
+                    <p class="mt-1 text-white text-sm leading-5 truncate">Day Off</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
 
 <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
@@ -31,6 +92,6 @@ layout: home
         height: "100%",
         channel: "chiefpansancolt",
         theme: "dark",
-        layout: "video"
+        layout: "video-chat"
     });
 </script>

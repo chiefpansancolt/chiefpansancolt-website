@@ -29,24 +29,15 @@ variables:
     video:
         - data
         - video navigation links
-    top:
-        - boolean
-        - mobile top section
 ---
 
 {% if mobile %}
-    {% if top %}
-        {% if url == page_url %}
-            <a href="{{ url }}" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-primary focus:outline-none focus:text-white focus:bg-gray-700">
-                {{ name }}
-            </a>
-        {% else %}
-            <a href="{{ url }}" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-secondary focus:outline-none focus:text-white focus:bg-gray-700">
-                {{ name }}
-            </a>
-        {% endif %}
+    {% if url == page_url %}
+        <a href="{{ url }}" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-primary focus:outline-none focus:text-white focus:bg-gray-700">
+            {{ name }}
+        </a>
     {% else %}
-        <a href="{{ url }}" class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-600 transition ease-in-out duration-150">
+        <a href="{{ url }}" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-secondary focus:outline-none focus:text-white focus:bg-gray-700">
             {{ name }}
         </a>
     {% endif %}

@@ -17,6 +17,14 @@ main {
   height: 100px;
 }
 
+.h-120 {
+  height: 31rem;
+}
+
+iframe {
+  border-radius: 0.5rem;
+}
+
 .prose {
   max-width: none !important;
 }
@@ -33,7 +41,7 @@ main {
   background-color: #6193AE;
 }
 
-@variants hover {
+@variants hover, focus {
   .bg-accent {
     background-color: #6193AE;
   }

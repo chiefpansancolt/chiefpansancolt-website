@@ -4,7 +4,7 @@ main:
     type: link
     first: true
   - name: Schedule
-    link: /schedule/
+    link: /#schedule
     type: link
     first: false
   - name: Videos
@@ -59,6 +59,8 @@ mobile:
       link: /schedule/
     - name: Blog
       link: /blog/
+    - name: Contact
+      link: /contact/
   bottom:
     - name: Simplecov Material
       link: /simplecov_material/

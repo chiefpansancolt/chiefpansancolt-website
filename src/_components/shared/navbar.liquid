@@ -28,45 +28,52 @@ variables:
         - The page object
 ---
 
-<div class="z-0 relative bg-secondary" data-controller="toggle">
-    <div class="relative z-10 shadow">
-        <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-5 sm:px-6 sm:py-4 lg:px-8 md:justify-start md:space-x-10">
-            <div>
-                <a href="#" class="flex">
-                    <img class="h-8 w-auto sm:h-10" src="/assets/images/logo/Logo_White.png" alt="Workflow">
-                </a>
-            </div>
-            <div class="-mr-2 -my-2 md:hidden">
-                <button data-action="click->toggle#toggle touch->toggle#toggle" data-toggle-target="mobile-menu" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
-            <div class="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12">
-                <nav class="flex">
-                    {% for item in navigation %}
-                        {% render "shared/navigation/navs", mobile: false, url: item.link, name: item.name, page_url: page.url, first: item.first, type: item.type, dropdown: item.dropdown, dropdown_in: item.in, video: video %}
-                    {% endfor %}
-                </nav>
-                <div class="flex-1 flex items-center justify-center lg:ml-6 lg:justify-end">
-                    <div class="max-w-lg w-full lg:max-w-xs">
-                        <label for="search" class="sr-only">Search</label>
-                        <div class="relative">
-                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
-                                </svg>
-                            </div>
-                            {% render "bridgetown_quick_search/search", placeholder: "Search", input_class: "block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 sm:text-sm transition duration-150 ease-in-out" %}
+<nav class="bg-secondary">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="border-b border-gray-50">
+            <div class="flex items-center justify-between h-16 px-4 sm:px-0">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <img class="h-8 w-8" src="/assets/images/logo/Logo_White.png" alt="Workflow logo">
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline">
+                            {% for item in navigation %}
+                                {% render "shared/navigation/navs", mobile: false, url: item.link, name: item.name, page_url: page.url, first: item.first, type: item.type, dropdown: item.dropdown, dropdown_in: item.in, video: video %}
+                            {% endfor %}
                         </div>
                     </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="flex-1 flex items-center justify-center lg:ml-6 lg:justify-end">
+                        <div class="max-w-lg w-full lg:max-w-xs">
+                            <label for="search" class="sr-only">Search</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                {% render "bridgetown_quick_search/search", placeholder: "Search", input_class: "block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 sm:text-sm transition duration-150 ease-in-out" %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button data-action="click->toggle#toggle touch->toggle#toggle" data-toggle-target="mobile-menu,close-icon,nav-icon" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-accent focus:outline-none focus:bg-accent focus:text-white">
+                        <svg data-toggle-name="close-icon" class="block h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg data-toggle-name="nav-icon" class="hidden block h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-
-    {% render "shared/navigation/docs_panel", ruby_gems: ruby_gems, salesforce: salesforce %}
-
+    
     {% render "shared/navigation/mobile", top: mobile_top, bottom: mobile_bottom, page: page %}
-</div>
+</nav>
+
+{% render "shared/navigation/docs_panel", ruby_gems: ruby_gems, salesforce: salesforce %}
