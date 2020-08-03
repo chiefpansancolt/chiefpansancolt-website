@@ -1,0 +1,14 @@
+---
+permalink: /clips/
+layout: page
+title: Gaming Clips
+subtitle: Checkout Chief's funny or clutch clips from Streams!
+---
+
+<div class="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 gap-4">
+        {% for item in site.data.youtube.clips %}
+            {% render "cards/youtube", record_id: item.id %}
+        {% endfor %}
+    </div>
+</div>
