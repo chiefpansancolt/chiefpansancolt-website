@@ -1,0 +1,14 @@
+---
+permalink: /how_tos/
+layout: page
+title: How To's
+subtitle: Checkout some of Chief's How To's for setups, builds, and coding examples.
+---
+
+<div class="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 gap-4">
+        {% for item in site.data.youtube.how_to %}
+            {% render "cards/youtube", record_id: item.id %}
+        {% endfor %}
+    </div>
+</div>
