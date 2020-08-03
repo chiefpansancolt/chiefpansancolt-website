@@ -11,76 +11,9 @@ layout: home
         <h3>Schedule</h3>
     </div>
     <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-8">
-        <li class="col-span-1 bg-primary rounded-lg shadow">
-            <div class="w-full flex items-center p-6 space-x-6">
-                <div class="flex-1 truncate">
-                    <div class="flex items-center">
-                        <h3 class="text-gray-100 text-sm leading-5 font-medium truncate">Monday</h3>
-                    </div>
-                    <p class="mt-1 text-white text-sm leading-5 truncate">Evening - 8pm EST</p>
-                </div>
-            </div>
-        </li>
-        <li class="col-span-1 bg-primary rounded-lg shadow">
-            <div class="w-full flex items-center p-6 space-x-6">
-                <div class="flex-1 truncate">
-                    <div class="flex items-center">
-                        <h3 class="text-gray-100 text-sm leading-5 font-medium truncate">Tuesday</h3>
-                    </div>
-                    <p class="mt-1 text-white text-sm leading-5 truncate">Evening - 8pm EST</p>
-                </div>
-            </div>
-        </li>
-        <li class="col-span-1 bg-primary rounded-lg shadow">
-            <div class="w-full flex items-center p-6 space-x-6">
-                <div class="flex-1 truncate">
-                    <div class="flex items-center">
-                        <h3 class="text-gray-100 text-sm leading-5 font-medium truncate">Wednesday</h3>
-                    </div>
-                    <p class="mt-1 text-white text-sm leading-5 truncate">Evening - 8pm EST</p>
-                </div>
-            </div>
-        </li>
-        <li class="col-span-1 bg-primary rounded-lg shadow">
-            <div class="w-full flex items-center p-6 space-x-6">
-                <div class="flex-1 truncate">
-                    <div class="flex items-center">
-                        <h3 class="text-gray-100 text-sm leading-5 font-medium truncate">Thursday</h3>
-                    </div>
-                    <p class="mt-1 text-white text-sm leading-5 truncate">Evening - 8pm EST</p>
-                </div>
-            </div>
-        </li>
-        <li class="col-span-1 bg-primary rounded-lg shadow">
-            <div class="w-full flex items-center p-6 space-x-6">
-                <div class="flex-1 truncate">
-                    <div class="flex items-center">
-                        <h3 class="text-gray-100 text-sm leading-5 font-medium truncate">Friday</h3>
-                    </div>
-                    <p class="mt-1 text-white text-sm leading-5 truncate">Evening - 8pm EST</p>
-                </div>
-            </div>
-        </li>
-        <li class="col-span-1 bg-primary rounded-lg shadow">
-            <div class="w-full flex items-center p-6 space-x-6">
-                <div class="flex-1 truncate">
-                    <div class="flex items-center">
-                        <h3 class="text-gray-100 text-sm leading-5 font-medium truncate">Saturday</h3>
-                    </div>
-                    <p class="mt-1 text-white text-sm leading-5 truncate">Evening - 8pm EST</p>
-                </div>
-            </div>
-        </li>
-        <li class="col-span-1 bg-primary rounded-lg shadow">
-            <div class="w-full flex items-center p-6 space-x-6">
-                <div class="flex-1 truncate">
-                    <div class="flex items-center">
-                        <h3 class="text-gray-100 text-sm leading-5 font-medium truncate">Sunday</h3>
-                    </div>
-                    <p class="mt-1 text-white text-sm leading-5 truncate">Day Off</p>
-                </div>
-            </div>
-        </li>
+        {% for item in site.data.schedule.schedule %}
+            {% render "cards/schedule_card", time: item.time, day: item.day, moreve: item.moreve %}
+        {% endfor %}
     </ul>
 </div>
 

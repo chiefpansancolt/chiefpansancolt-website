@@ -1,0 +1,22 @@
+schedule:
+  - day: Monday
+    time: 8pm
+    moreve: Evening
+  - day: Tuesday
+    time: 8pm
+    moreve: Evening
+  - day: Wednesday
+    time: 8pm
+    moreve: Evening
+  - day: Thursday
+    time: 8pm
+    moreve: Evening
+  - day: Friday
+    time: 8pm
+    moreve: Evening
+  - day: Saturday
+    time: 8pm
+    moreve: Evening
+  - day: Sunday
+    time: ""
+    moreve: ""
