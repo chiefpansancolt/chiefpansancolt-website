@@ -1,6 +1,6 @@
-const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const ManifestPlugin = require("webpack-manifest-plugin");
+const path = require("path")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const ManifestPlugin = require("webpack-manifest-plugin")
 
 module.exports = {
   entry: "./frontend/javascript/index.js",
@@ -10,22 +10,22 @@ module.exports = {
     modules: false,
     builtAt: false,
     timings: false,
-    children: false,
+    children: false
   },
   output: {
     path: path.resolve(__dirname, "output", "_bridgetown", "static", "js"),
-    filename: "all.[contenthash].js",
+    filename: "all.[contenthash].js"
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".jsx"]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "../css/all.[contenthash].css",
+      filename: "../css/all.[contenthash].css"
     }),
     new ManifestPlugin({
-      fileName: path.resolve(__dirname, ".bridgetown-webpack", "manifest.json"),
-    }),
+      fileName: path.resolve(__dirname, ".bridgetown-webpack", "manifest.json")
+    })
   ],
   module: {
     rules: [{
@@ -36,20 +36,47 @@ module.exports = {
             presets: ["@babel/preset-env"],
             plugins: [
               ["@babel/plugin-proposal-decorators", {
-                "legacy": true
+                legacy: true
               }],
               ["@babel/plugin-proposal-class-properties", {
-                "loose": true
+                loose: true
               }],
               [
                 "@babel/plugin-transform-runtime",
                 {
-                  helpers: false,
-                },
+                  helpers: false
+                }
               ],
-            ],
-          },
-        },
+              [
+                "prismjs",
+                {
+                  languages: [
+                    "markup",
+                    "css",
+                    "clike",
+                    "javascript",
+                    "bash",
+                    "crystal",
+                    "docker",
+                    "erb",
+                    "git",
+                    "graphql",
+                    "haml",
+                    "liquid",
+                    "markdown",
+                    "markup-templating",
+                    "ruby",
+                    "scss",
+                    "yaml"
+                  ],
+                  plugins: ["line-numbers"],
+                  theme: "okaidia",
+                  css: true
+                }
+              ]
+            ]
+          }
+        }
       },
       {
         test: /\.(s[ac]|c)ss$/,
@@ -61,22 +88,20 @@ module.exports = {
             loader: "sass-loader",
             options: {
               sassOptions: {
-                includePaths: [
-                  path.resolve(__dirname, "src/_components")
-                ],
-              },
-            },
-          },
-        ],
+                includePaths: [path.resolve(__dirname, "src/_components")]
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
         loader: "file-loader",
         options: {
           outputPath: "../fonts",
-          publicPath: "../fonts",
-        },
-      },
-    ],
-  },
-};
+          publicPath: "../fonts"
+        }
+      }
+    ]
+  }
+}

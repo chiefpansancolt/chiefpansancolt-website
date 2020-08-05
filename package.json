@@ -46,6 +46,7 @@
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "@tailwindcss/typography": "^0.2.0",
     "babel-loader": "^8.1.0",
+    "babel-plugin-prismjs": "^2.0.1",
     "browser-sync": "^2.26.7",
     "concurrently": "^5.2.0",
     "css-loader": "^3.4.2",
@@ -73,6 +74,8 @@
   "dependencies": {
     "@tailwindcss/ui": "^0.4.0",
     "bridgetown-quick-search": "1.0.3",
+    "prismjs": "^1.20.0",
+    "stimulus-tabs": "^1.0.5",
     "tailwindcss": "^1.5.2"
   }
 }
