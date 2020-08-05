@@ -24,7 +24,9 @@ var afterClick = function () {
     const selectedTab = results.dataset.tabularSelectedTab
     const previousTab = results.dataset.tabularPreviousTab
 
-    console.log(previousTab)
+    if(selectedTab != previousTab) {
+        
+    }
 };
 
 tabNav.addEventListener('click', afterClick, false);
