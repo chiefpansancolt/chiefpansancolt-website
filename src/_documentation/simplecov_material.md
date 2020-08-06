@@ -8,6 +8,7 @@ tags:
   - material
   - installation
   - simplecov material
+  - ruby gem
 category: Documentation
 ---
 
@@ -128,7 +129,7 @@ SimpleCov.formatters = SimpleCov::Formatter::MultiFormatter.new([
 ```
 </div>
 
-<div data-target="tabular.contribution" class="prose" markdown="1">
+<div data-target="tabular.contribution" markdown="1">
 First and for most thank you for taking the time to look to contribute to
 Simplecov Material, any help is apprciated to make Simplecov Material better
 and stronger!
