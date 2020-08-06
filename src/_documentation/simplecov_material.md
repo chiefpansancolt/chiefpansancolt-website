@@ -215,7 +215,7 @@ issues or pull requests you're interested in. For example, you might be interest
 opening a pull request. To help you find issues and pull requests, each label is listed with search links for finding
 open items with that label in Simplecov Material. We encourage you to read about [other search filters](https://help.github.com/articles/searching-issues/) which will help you write more focused queries.
 
-### Type of Issue and Issue State
+#### Type of Issue and Issue State
 
 | Label Name | Description |
 | --- | --- |
