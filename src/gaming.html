@@ -8,7 +8,7 @@ subtitle: Checkout some of Chief's Gaming videos for games like Valorant, Call o
 <div class="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-2 gap-4">
         {% for item in site.data.youtube.gaming %}
-            {% render "cards/youtube", record_id: item.id %}
+            {% render "cards/youtube", record_id: item.id, type: "playlist" %}
         {% endfor %}
     </div>
 </div>

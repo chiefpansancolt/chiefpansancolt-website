@@ -1,5 +1,5 @@
 ---
-permalink: /devise_materialize/
+permalink: /docs/devise_materialize/
 layout: docs
 title: Devise Materialize
 tags:

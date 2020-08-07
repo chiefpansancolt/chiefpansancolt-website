@@ -1,5 +1,5 @@
 ---
-permalink: /simple_form_materialize/
+permalink: /docs/simple_form_materialize/
 layout: docs
 title: Simple Form Materialize
 tags:

@@ -1,5 +1,5 @@
 ---
-permalink: /simplecov_material/
+permalink: /docs/simplecov_material/
 layout: docs
 title: Simplecov Material
 tags:
@@ -13,7 +13,7 @@ category: Documentation
 ---
 
 <div data-target="tabular.overview" markdown="1">
-<div class="flex items-center" markdown="1" style="margin-top: -20px; margin-bottom: -10px;">
+<div class="flex items-center" markdown="1" style="margin-bottom: -10px; margin-top: -20px;">
   <div class="flex pl-2">
     <img src="https://github.com/chiefpansancolt/simplecov-material/workflows/Builds/badge.svg" />
   </div>

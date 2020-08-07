@@ -1,5 +1,5 @@
 ---
-permalink: /package_builder/
+permalink: /docs/package_builder/
 layout: docs
 title: Package Builder
 tags:

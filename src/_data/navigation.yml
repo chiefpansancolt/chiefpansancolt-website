@@ -42,14 +42,14 @@ video:
 docs:
   ruby_gems:
     - name: Simplecov Material
-      link: /simplecov_material/
+      link: /docs/simplecov_material/
     - name: Simple Form Materialize
-      link: /simple_form_materialize/
+      link: /docs/simple_form_materialize/
     - name: Devise Materialize
-      link: /devise_materialize/
+      link: /docs/devise_materialize/
   salesforce:
     - name: Package Builder
-      link: /package_builder/
+      link: /docs/package_builder/
 
 mobile:
   top:
