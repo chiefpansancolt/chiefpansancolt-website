@@ -23,6 +23,10 @@ main:
     dropdown: docs_panel
     in: false
     first: false
+  - name: Merch
+    link: https://merch.chiefpansancolt.live
+    type: link
+    first: false
   - name: Contact
     link: /contact/
     type: link
@@ -56,7 +60,7 @@ mobile:
     - name: Home
       link: /
     - name: Schedule
-      link: /schedule/
+      link: /#schedule
     - name: Blog
       link: /blog/
     - name: Contact
@@ -76,3 +80,51 @@ mobile:
       link: /clips/
     - name: How To Video Series
       link: /how_tos/
+
+footer:
+  one:
+    - name: Live Stream
+      link: https://twitch.tv/chiefpansancolt
+      first: true
+    - name: YouTube
+      link: https://www.youtube.com/channel/UCDiSj1nIsOnMHo3IASiN-3w
+      first: false
+    - name: Schedule
+      link: /#schedule
+      first: false
+    - name: Contact
+      link: /contact/
+      first: false
+  two:
+    - name: Simplecov Material
+      link: /docs/simplecov_material/
+      first: false
+    - name: Package Builder
+      link: /docs/package_builder/
+      first: false
+    - name: Devise Materialize
+      link: /docs/devise_materialize/
+      first: false
+    - name: Simple Form Materialize
+      link: /docs/simple_form_materialize/
+      first: false
+  three:
+    - name: Merch
+      link: https://merch.chiefpansancolt.live
+      first: false
+    - name: Blog
+      link: /blog/
+      first: false
+    - name: Social Media
+      link: /social_media/
+      first: false
+  four:
+    - name: Status Page
+      link: https://chiefpansancolt.instatus.com
+      first: true
+    - name: Privacy
+      link: /privacy/
+      first: false
+    - name: Site Repo
+      link: https://github.com/chiefpansancolt/chiefpansancolt-website
+      first: false

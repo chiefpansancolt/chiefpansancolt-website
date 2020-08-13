@@ -6,6 +6,6 @@
     <body class="{{ page.layout }} {{ page.page_class }}" data-controller="toggle">
         {{ content }}
 
-        {% render "shared/footer", metadata: site.metadata %}
+        {% render "shared/footer", metadata: site.metadata, column_one: site.data.navigation.footer.one, column_two: site.data.navigation.footer.two, column_three: site.data.navigation.footer.three, column_four: site.data.navigation.footer.four %}
     </body>
 </html>
