@@ -10,6 +10,9 @@ layout: home
     <div class="text-center prose-2xl pt-10">
         <h3>Schedule</h3>
     </div>
+    <div class="text-center prose pt-5">
+        <h5>Schedule is subject to change per day as Family comes first and my cause days to switch around. This schedule is a baseline that I will try to stick too. Thanks! See you in the chat!</h5>
+    </div>
     <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-8">
         {% for item in site.data.schedule.schedule %}
             {% render "cards/schedule_card", time: item.time, day: item.day, moreve: item.moreve %}
