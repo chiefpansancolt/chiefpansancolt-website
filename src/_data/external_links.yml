@@ -1,0 +1,60 @@
+social_media:
+  - name: Twitter
+    icon: twitter
+    color: "#1DA1F2"
+    link: https://twitter.com/chiefpansancolt
+    handle: "@chiefpansancolt"
+  - name: Instagram
+    icon: instagram
+    color: "#E4405F"
+    link: https://instagram.com/chiefpansancolt
+    handle: "@chiefpansancolt"
+  - name: Facebook
+    icon: facebookgaming
+    color: "#005FED"
+    link: https://facebook.com/chiefpansancolt
+    handle: "@chiefpansancolt"
+  - name: eFuse
+    icon: efuse
+    color: "#000000"
+    link: https://efuse.gg/u/chiefpansancolt
+    handle: "@chiefpansancolt"
+  - name: TikTok
+    icon: tiktok
+    color: "#000000"
+    link: https://tiktok.com/@chiefpansancolt
+    handle: "@chiefpansancolt"
+media:
+  - name: YouTube
+    icon: youtube
+    color: "#FF0000"
+    link: https://youtube.com/channel/UCDiSj1nIsOnMHo3IASiN-3w
+    handle: "chiefpansancolt"
+  - name: Twitch
+    icon: twitch
+    color: "#9146FF"
+    link: https://twitch.tv/chiefpansancolt
+    handle: "chiefpansancolt"
+development:
+  - name: Github
+    icon: github
+    color: "#181717"
+    link: https://github.com/chiefpansancolt
+    handle: "chiefpansancolt"
+community:
+  - name: Discord
+    icon: discord
+    color: "#7289DA"
+    link: https://discord.gg/fzXW3rW
+    handle: "chiefpansancolt#4352"
+articles:
+  - name: Dev.to
+    icon: dev-dot-to
+    color: "#181717"
+    link: https://dev.to/chiefpansancolt
+    handle: "chiefpansancolt"
+  - name: Medium
+    icon: medium
+    color: "#12100E"
+    link: https://medium.com/@chiefpansancolt
+    handle: "@chiefpansancolt"
