@@ -1,0 +1,19 @@
+---
+layout: page
+title: Chief's Pop's Collection
+---
+
+<div class="relative max-w-7xl mx-auto mb-24">
+    <div>
+        {% for item in site.data.pop_categories.categories %}
+            <span data-name="{{ item.name }}" class="pop-badge inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium leading-5 bg-orange-100 text-orange-800 cursor-pointer">
+                {{ item.name }}
+            </span>
+        {% endfor %}
+    </div>
+    <div class="mt-12 grid gap-4 max-w-lg mx-auto lg:grid-cols-6 lg:max-w-none">
+        {% for item in site.pops %}
+            {% render "cards/pop_tile", pop: item %}
+        {% endfor %}
+    </div>
+</div>

@@ -41,6 +41,10 @@ iframe {
   background-color: #6193AE;
 }
 
+.border-secondary {
+  border-color: #56437C;
+}
+
 @variants hover, focus {
   .bg-accent {
     background-color: #6193AE;
