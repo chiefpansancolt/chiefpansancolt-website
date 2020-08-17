@@ -1,7 +1,52 @@
 ---
 layout: default
+
 ---
 
-<h1>{{ page.title }}</h1>
+<div class="bg-secondary pb-32">
+    {% render "shared/navbar", metadata: site.metadata, navigation: site.data.navigation.main, ruby_gems: site.data.navigation.docs.ruby_gems, salesforce: site.data.navigation.docs.salesforce, video: site.data.navigation.video, mobile_top: site.data.navigation.mobile.top, mobile_bottom: site.data.navigation.mobile.bottom, page: page %}
 
-{{ content }}
+    <header class="py-10 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl leading-9 font-bold text-white">
+                {{ page.title }}
+            </h1>
+        </div>
+    </header>
+</div>
+
+<main class="-mt-32">
+    <div class="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
+        <div class="bg-white overflow-hidden shadow rounded-lg">
+            <img src="{{ page.img }}" alt="{{ page.alt }}" width="100%"/>
+            <div class="mt-3 ml-4 flex items-center">
+                <div class="flex-shrink-0">
+                    <a href="{{ page.user_url }}">
+                        <img class="h-10 w-10 rounded-full" src="{{ page.user_img }}" alt="">
+                    </a>
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm leading-5 font-medium text-gray-900">
+                        {{ page.user }}
+                    </p>
+                    <div class="flex text-sm leading-5 text-gray-500">
+                        <span>
+                            {{ page.date | date: "%B %-d, %Y" }}
+                        </span>
+                        <span class="mx-1">
+                            &middot;
+                        </span>
+                        <span>
+                            {{ page.read_time }} min read
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 prose p-4">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</main>
+
+{% render "other/back_to_top" %}

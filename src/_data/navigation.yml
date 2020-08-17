@@ -14,7 +14,7 @@ main:
     first: false
     in: true
   - name: Blog
-    link: /blog/
+    link: /posts/
     type: link
     first: false
   - name: Documentation
@@ -25,6 +25,10 @@ main:
     first: false
   - name: Merch
     link: https://merch.chiefpansancolt.live
+    type: link
+    first: false
+  - name: Pop! Collection
+    link: /pops/
     type: link
     first: false
   - name: Contact
@@ -111,6 +115,9 @@ footer:
   three:
     - name: Merch
       link: https://merch.chiefpansancolt.live
+      first: false
+    - name: Donate
+      link: https://streamelements.com/chiefpansancolt/tip
       first: false
     - name: Blog
       link: /blog/

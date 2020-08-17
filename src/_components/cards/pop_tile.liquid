@@ -1,0 +1,30 @@
+---
+name: "Card: Pop!"
+description: Details about the Pop!
+variables:
+    pop:
+        - object
+        - details about the blog
+---
+
+<article data-group="{{ pop.group }}" class="pop flex flex-col overflow-hidden transition-transform duration-300 ease-in-out transform bg-white rounded-lg shadow sm:shadow-md md:shadow-lg hover:-translate-y-2 hover:shadow-xl">
+    <div class="h-full">
+        <div class="flex-shrink-0">
+            <img class="h-48 w-full object-cover" src="{{ pop.img }}" alt="{{ pop.img_alt }}">
+        </div>
+        <div class="flex-1 bg-white flex flex-col justify-between">
+            <div class="flex-1">
+                <div class="block">
+                    <h3 class="ml-3 mb-1 text-sm font-semibold text-gray-900">
+                        {{ pop.name }}
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="fixed top-2 right-2">
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium leading-4 bg-yellow-100 text-yellow-800">
+                {{ pop.number }}
+            </span>
+        </div>
+    </div>
+</article>

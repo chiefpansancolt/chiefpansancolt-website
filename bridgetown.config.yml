@@ -12,11 +12,20 @@ collections:
   clips:
     output: true
     name: Clips
+  pops:
+    output: true
+    name: Pops
+    sort_by: group
   documentation:
     output: true
     name: Documentation
 
 defaults:
+  - scope:
+      path: _posts
+    values:
+      layout: post
+      category: posts
   - scope:
       path: "assets/images"
     values:

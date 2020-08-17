@@ -1,0 +1,16 @@
+---
+layout: page
+title: The Chief Talk
+permalink: /posts/
+pagination:
+    enabled: true
+    collection: posts
+---
+
+<div class="relative max-w-7xl mx-auto mb-24">
+    <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+        {% for post in paginator.documents %}
+            {% render "cards/blog_tile", blog: post %}
+        {% endfor %}
+    </div>
+</div>
