@@ -61,7 +61,7 @@ if(mybutton) {
 
 var tags = document.querySelectorAll('.pop-badge');
 var popList = document.querySelectorAll('.pop');
-var dotSvg = '<svg class="-ml-0.5 mr-1.5 h-2 w-2 text-orange-400" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" /></svg>';
+var dotSvg = '<svg class="-ml-0.5 mr-1.5 h-2 w-2 text-white" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" /></svg>';
 
 var tagClick = function(event) {
     const name = event.target.dataset.name;

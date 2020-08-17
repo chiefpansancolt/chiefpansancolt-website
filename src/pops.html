@@ -6,7 +6,7 @@ title: Chief's Pop's Collection
 <div class="relative max-w-7xl mx-auto mb-24">
     <div>
         {% for item in site.data.pop_categories.categories %}
-            <span data-name="{{ item.name }}" class="pop-badge inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium leading-5 bg-orange-100 text-orange-800 cursor-pointer">
+            <span data-name="{{ item.name }}" class="pop-badge inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium leading-5 bg-primary text-white cursor-pointer">
                 {{ item.name }}
             </span>
         {% endfor %}
