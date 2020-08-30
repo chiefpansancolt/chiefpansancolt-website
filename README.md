@@ -2,7 +2,7 @@
   <a href="https://chiefpansancolt.live" target="_blank">chiefpansancolt.live</a>
 </h1>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5f252587-73c2-4962-bb77-64904617f77d/deploy-status)](https://app.netlify.com/sites/chris-pezza/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/09afff0f-5797-4bc8-9ce4-d7a5eb48af4c/deploy-status)](https://app.netlify.com/sites/chiefpansancolt/deploys)
 
 > My personal website, created with BridgetownRB and TailwindCSS
 
