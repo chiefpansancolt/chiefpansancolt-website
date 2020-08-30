@@ -26,7 +26,7 @@
 
 👤 **Christopher Pezza**
 
-* Website: https://chris-pezza.com
+* Website: https://chiefpansancolt.live
 * Twitter: [@chiefpansancolt](https://twitter.com/chiefpansancolt)
 * Github: [@chiefpansancolt](https://github.com/chiefpansancolt)
 * LinkedIn: [pezzachristopher](https://linkedin.com/in/pezzachristopher)
