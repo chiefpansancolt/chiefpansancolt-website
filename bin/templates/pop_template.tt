@@ -1,6 +1,6 @@
 ---
 name: <%= config[:name] %>
-img: /assets/images/pops/<%= config[:img] %>
+img: <%= config[:img] %>
 number: <%= config[:number] %>
 group: <%= config[:group] %>
 ---
