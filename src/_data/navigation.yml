@@ -24,7 +24,7 @@ main:
     in: false
     first: false
   - name: Merch
-    link: https://merch.chiefpansancolt.live
+    link: https://merch.streamelements.com/chiefpansancolt
     type: link
     first: false
   - name: Pop! Collection
