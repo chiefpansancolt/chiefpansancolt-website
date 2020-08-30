@@ -71,13 +71,13 @@ mobile:
       link: /contact/
   bottom:
     - name: Simplecov Material
-      link: /simplecov_material/
+      link: /docs/simplecov_material/
     - name: Simple Form Materialize
-      link: /simple_form_materialize/
+      link: /docs/simple_form_materialize/
     - name: Devise Materialize
-      link: /devise_materialize/
+      link: /docs/devise_materialize/
     - name: Package Builder
-      link: /package_builder/
+      link: /docs/package_builder/
     - name: Video Game Series
       link: /gaming/
     - name: Gaming Clips
