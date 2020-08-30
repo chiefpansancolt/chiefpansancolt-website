@@ -1,0 +1,69 @@
+---
+layout: page
+title: Contact
+permalink: /contact/
+---
+
+<div class="max-w-4xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
+    <div class="p-4 bg-white overflow-hidden shadow rounded-lg">
+        <div class="prose">
+            Feel free to send a message via the contact form, or contact me
+            <a class="mailtoui" href="mailto:business@chiefpansancolt.live">directly</a>. You can also connect with me via
+            <a href="/social_media/">social media</a>!
+        </div>
+
+        <form name="contactForm" method="POST" id="contact-form" netlifyHoneypot="bot-field" data-netlify-recaptcha="true"
+            data-netlify="true">
+            <div class="mt-6 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-6">
+                <div class="sm:col-span-12">
+                    <div class="flex justify-between">
+                        <label for="name" class="block text-sm font-medium leading-5 text-gray-700">Name</label>
+                        <span class="text-sm leading-5 text-red-500" id="name-required">Required</span>
+                    </div>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                        <input id="name" name="name" type="text" class="form-input block w-full sm:text-sm sm:leading-5" placeholder="John Doe" required>
+                    </div>
+                </div>
+
+                <div class="sm:col-span-12">
+                    <div class="flex justify-between">
+                        <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Email</label>
+                        <span class="text-sm leading-5 text-red-500" id="email-required">Required</span>
+                    </div>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                        </div>
+                        <input id="email" name="email" type="email" class="form-input block w-full pl-10 sm:text-sm sm:leading-5" placeholder="you@example.com" required>
+                    </div>
+                </div>
+
+                <div class="sm:col-span-12">
+                    <div class="flex justify-between">
+                        <label for="message" class="block text-sm font-medium leading-5 text-gray-700">Message</label>
+                        <span class="text-sm leading-5 text-red-500" id="message-required">Required</span>
+                    </div>
+                    <div class="mt-1 rounded-md shadow-sm">
+                        <textarea id="message" rows="4" name="message" class="form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5" placeholder="Enter your message here!" required></textarea>
+                    </div>
+                </div>
+
+                <div class="sm:col-span-12">
+                    <div data-netlify-recaptcha="true"></div>
+                </div>
+                <div class="sm:col-span-12">
+                    <span class="inline-flex w-full rounded-md shadow-sm">
+                        <button type="submit" class="flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-blue-600 border border-transparent rounded-md hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue md:py-4 md:text-lg md:px-10">
+                            Send Message
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"></script>
