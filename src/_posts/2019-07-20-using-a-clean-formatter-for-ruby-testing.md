@@ -23,15 +23,17 @@ With Ruby, a common library used to see what the outputed code coverage is, is [
 With that, I decided to go to the drawing board to design and build a new UX for a HTML web output that leveraged the new standards of [Material Design](https://material.io/). I analyzed what worked and what didn't with the HTML Formatter offered and concluded the following.
 
 The Goods
-  - Ability to search files in a group.
-  - Ability to see groups.
+
+- Ability to search files in a group.
+- Ability to see groups.
 
 The Bads
-  - When groups get over 6 in total it starts to cause the page to look weird.
-  - When file name get long and screen is small rows fall off of table view and become unreadable.
-  - Difficult to read coverage per file and per group.
-  - Scrolling on a file view could scroll past the file if your cursor was in the wrong spot.
-  - When viewing an individual file source you really didn't know what file you clicked on or what the details were about that file without closing the modal to view the table.
+
+- When groups get over 6 in total it starts to cause the page to look weird.
+- When file name get long and screen is small rows fall off of table view and become unreadable.
+- Difficult to read coverage per file and per group.
+- Scrolling on a file view could scroll past the file if your cursor was in the wrong spot.
+- When viewing an individual file source you really didn't know what file you clicked on or what the details were about that file without closing the modal to view the table.
 
 I knew that I had to maintain a singular page generation to ensure not to many dependency files were needed when generating. This led me to move away from a tabular approach and more for a left navigation approach. This would allow for a scrollable user interaction. I also looked to move the sentence about the numbers, which was to much and hard to read. So I looked to change that to a tile grid at the top of each group page. There were little changes that will be noticed throughout the page such as, the footer is cleaner, the name of the project is displayed with dashes and underscores stripped out, the text for a file is cut off with ellipses in the table to ensure rows adhere to column width appropriately. From a repo structure I looked to implement and use Webpack to generate the output application js and css files for usage.
 
@@ -90,7 +92,7 @@ group :test do
   gem "simplecov"
 end
 
-source "https://rubygems.pkg.github.com/chiefpansancolt" 
+source "https://rubygems.pkg.github.com/chiefpansancolt"
   group :test do
     gem "simplecov-material"
   end

@@ -46,6 +46,7 @@ Initial Release
 To install simply use the url and password below in an environment to get started.
 
 ## Installation
+
 **Installation URL:** [https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1U000006I6N9&isdtp=p1](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1U000006I6N9&isdtp=p1)
 
 **Installation Password:** 3BpmOLZnwPQO
@@ -55,14 +56,17 @@ Note: If package is installed for System Administraotrs Only the below is applic
 ## After Installation
 
 ### Add Tab
+
 Now that the package is installed you will need to assign Package Builder Tab to all applicale profiles
 
 ### Add Classes
+
 Assign the below Apex Classes to a all applicable profiles.
 
 - MetadataService
 - MetadataSelector
 - MetadaUtility
+
 </div>
 
 <div data-target="tabular.usage" markdown="1">

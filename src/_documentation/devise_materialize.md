@@ -81,6 +81,7 @@ Devise Materialize gem is here to generate you devise view in a materialize styl
   **Form Types Supported:**
     - form_for
     - simple_form_for
+
 </div>
 
 <div data-target="tabular.installation" markdown="1">
