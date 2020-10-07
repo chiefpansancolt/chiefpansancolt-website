@@ -13,3 +13,30 @@ jobs:
       with:
         reporter: github-check
         eslint_flags: 'frontend/'
+        fail_on_error: true
+  
+  css:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1.4.4
+      with:
+        node-version: '14'
+    - name: install dependencies
+      run: npm install
+    - name: stylelint
+      uses: reviewdog/action-stylelint@v1.7.0
+      with:
+        reporter: github-check
+        stylelint_input: 'frontend/**/*.css'
+
+  markdown:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: stylelint
+      uses: prologic/action-markdownlint@v0.1
+      with:
+        reporter: github-check
