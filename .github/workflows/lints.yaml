@@ -28,6 +28,7 @@ jobs:
     - name: stylelint
       uses: reviewdog/action-stylelint@v1.7.0
       with:
+        github_token: ${{ secrets.github_token }}
         reporter: github-check
         stylelint_input: 'frontend/**/*.css'
 
