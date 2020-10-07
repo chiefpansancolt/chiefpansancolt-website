@@ -22,7 +22,7 @@ main {
 }
 
 iframe {
-  border-radius: 0.5rem;
+  border-radius: .5rem;
 }
 
 .prose {
@@ -45,11 +45,14 @@ iframe {
   border-color: #56437C;
 }
 
+/* stylelint-disable */
 @variants hover, focus {
+
   .bg-accent {
     background-color: #6193AE;
   }
 }
+/* stylelint-enable */
 
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
