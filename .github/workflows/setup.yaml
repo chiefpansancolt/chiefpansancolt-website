@@ -1,0 +1,28 @@
+name: Setup
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      RAILS_ENV: test
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Ruby
+      uses: actions/setup-ruby@v1.1.2
+      with:
+        ruby-version: '2.7.2'
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: administrate-${{ matrix.image }}-${{ hashFiles('Gemfile.lock') }}
+    - name: Install yarn dependencies
+      run: yarn install
+    - name: Install postgres headers
+      run: sudo apt-get install libpq-dev
+    - name: Install dependencies
+      run: bundle install --path vendor/bundle
