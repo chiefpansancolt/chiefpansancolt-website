@@ -43,6 +43,7 @@ Generates a HTML Material Design report generated from Simplecov using ruby 2.3 
 ### Version [0.5.0](https://github.com/chiefpansancolt/simplecov-material/releases/tag/0.5.0)
 
 #### Bug Fixes
+
 - Sort by value and not string usage (#8) Thanks @silent-e!
 - Headers in Table overlap when screens are smaller (#10)
 - Tile text breaks out of container at narrower widths (#11)
@@ -50,6 +51,7 @@ Generates a HTML Material Design report generated from Simplecov using ruby 2.3 
 ### Version [0.4.0](https://github.com/chiefpansancolt/simplecov-material/releases/tag/0.4.0)
 
 #### Feature Additions
+
 - Enabled Github Action usage
 - Added Default Sort on Covered Percentage (#4)
 - Added Column Sorting (#4)
@@ -100,6 +102,7 @@ source "https://rubygems.pkg.github.com/chiefpansancolt"
   end
 end
 ```
+
 </div>
 
 <div data-target="tabular.usage" markdown="1">
@@ -127,6 +130,7 @@ SimpleCov.formatters = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::MaterialFormatter
 ])
 ```
+
 </div>
 
 <div data-target="tabular.contribution" markdown="1">
