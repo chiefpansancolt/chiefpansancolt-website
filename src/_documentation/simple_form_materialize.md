@@ -73,9 +73,9 @@ Simple Form Materialize is here to help generate your configuration needed to us
 #### Features
 
 - Generate Materialize Configuration for Simple Form
-  - Javascript File
-  - Simple_form components File
-  - Simple_form configuration File
+    - Javascript File
+    - Simple_form components File
+    - Simple_form configuration File
 
 </div>
 
