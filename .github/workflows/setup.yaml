@@ -25,4 +25,6 @@ jobs:
     - name: Install postgres headers
       run: sudo apt-get install libpq-dev
     - name: Install dependencies
-      run: bundle install --path vendor/bundle
+      run: bundle install
+    - name: Test Build
+      run: yarn deploy
