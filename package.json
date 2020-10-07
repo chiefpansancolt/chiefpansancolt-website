@@ -1,13 +1,13 @@
 {
   "name": "chiefpansancolt-website",
-  "version": "1.0.0",
+  "version": "0.5.0",
   "description": "Chris Pezza Website for Persona at chiefpansancolt.live",
   "private": true,
   "scripts": {
     "markdown": "markdownlint src/**/*.md -c .markdownlint.yml",
     "html": "html-linter --config html-linter.json",
     "javascript": "eslint frontend/**/*.js",
-    "css": "stylelint frontend/**/*.scss",
+    "css": "stylelint frontend/**/*.css",
     "build": "bundle exec bridgetown build",
     "serve": "bundle exec bridgetown serve",
     "webpack-build": "webpack --mode production",
