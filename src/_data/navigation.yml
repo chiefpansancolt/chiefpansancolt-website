@@ -51,6 +51,8 @@ docs:
   ruby_gems:
     - name: Simplecov Material
       link: /docs/simplecov_material/
+    - name: Simplecov Tailwind
+      link: /docs/simplecov_tailwindcss/
     - name: Simple Form Materialize
       link: /docs/simple_form_materialize/
     - name: Devise Materialize
@@ -72,6 +74,8 @@ mobile:
   bottom:
     - name: Simplecov Material
       link: /docs/simplecov_material/
+    - name: Simplecov Tailwind
+      link: /docs/simplecov_tailwind/
     - name: Simple Form Materialize
       link: /docs/simple_form_materialize/
     - name: Devise Materialize
@@ -102,6 +106,9 @@ footer:
   two:
     - name: Simplecov Material
       link: /docs/simplecov_material/
+      first: false
+    - name: Simplecov Tailwind
+      link: /docs/simplecov_tailwindcss/
       first: false
     - name: Package Builder
       link: /docs/package_builder/
