@@ -40,6 +40,16 @@ Generates a HTML Material Design report generated from Simplecov using ruby 2.3 
 
 ## Changelog
 
+### Version [1.0.0](https://github.com/chiefpansancolt/simplecov-material/releases/tag/1.0.0)
+
+#### Feature Additions
+
+- Now supports Branches
+
+#### Bug Fixes
+
+- added a space between to and path for coverage output (#13) - Thanks @YashdalfTheGray!
+
 ### Version [0.5.0](https://github.com/chiefpansancolt/simplecov-material/releases/tag/0.5.0)
 
 #### Bug Fixes
