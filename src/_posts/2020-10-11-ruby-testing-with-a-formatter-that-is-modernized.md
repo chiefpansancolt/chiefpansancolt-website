@@ -78,8 +78,8 @@ To add to your gemfile see below or check out the [Documentation](https://chiefp
 # ./Gemfile
 
 group :test do
-  gem "simplecov"
-  gem "simplecov-tailwindcss"
+  gem "simplecov", require: false
+  gem "simplecov-tailwindcss", require: false
 end
 ```
 
@@ -89,12 +89,12 @@ end
 # ./Gemfile
 
 group :test do
-  gem "simplecov"
+  gem "simplecov", require: false
 end
 
-source "https://rubygems.pkg.github.com/chiefpansancolt" 
+source "https://rubygems.pkg.github.com/chiefpansancolt"
   group :test do
-    gem "simplecov-tailwindcss"
+    gem "simplecov-tailwindcss", require: false
   end
 end
 ```
