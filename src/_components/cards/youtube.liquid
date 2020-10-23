@@ -7,16 +7,22 @@ variables:
         - Id of the Youtube Video Series
     type:
         - string
-        - options are clips or playlist
+        - options are playlist, youtube, medal, or twitch
 ---
 
-{% assign video = "https://www.youtube.com/embed/" %}
 {% assign playlist = "https://www.youtube.com/embed/videoseries?controls=0&amp;list=" %}
+{% assign youtube = "https://www.youtube.com/embed/" %}
+{% assign twitch = "https://clips.twitch.tv/embed?clip=" %}
+{% assign medal = "https://medal.tv/clip/" %}
 
 {% if type == "playlist" %}
     {% assign link = playlist | append: record_id %}
-{% elsif type == "clips" %}
-    {% assign link = video | append: record_id %}
+{% elsif type == "youtube" %}
+    {% assign link = youtube | append: record_id %}
+{% elsif type == "twitch" %}
+    {% assign link = twitch | append: record_id %}
+{% elsif type == "medal" %}
+    {% assign link = medal | append: record_id %}
 {% endif %}
 
 <div class="col-span-1 flex flex-col h-100 text-center bg-white rounded-lg shadow transition-transform duration-300 ease-in-out transform sm:shadow-md md:shadow-lg hover:-translate-y-2 hover:shadow-xl">
