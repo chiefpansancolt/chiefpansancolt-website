@@ -12,6 +12,7 @@ collections:
   clips:
     output: true
     name: Clips
+    sort_by: date
   pops:
     output: true
     name: Pops
