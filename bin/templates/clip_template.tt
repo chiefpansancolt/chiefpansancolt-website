@@ -1,0 +1,7 @@
+---
+title: "<%= config[:name] %>"
+record_id: <%= config[:record_id] %>
+type: <%= config[:collection] %>
+date: <%= config[:date] %>T00:00:00.000Z
+collection: clips
+---
