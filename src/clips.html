@@ -3,41 +3,12 @@ permalink: /clips/
 layout: page
 title: Gaming Clips
 subtitle: Checkout Chief's funny or clutch clips from Streams!
-pagination:
-    enabled: true
-    collection: clips
 ---
 
 <div class="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-2 gap-4">
-        {% for item in paginator.documents %}
-            {% render "cards/youtube", record_id: item.record_id, type: item.type %}
+    <div class="grid grid-cols-3 gap-4">
+        {% for item in site.clips %}
+            {% render "cards/youtube", record_id: item.record_id, type: item.type, layout: "clips" %}
         {% endfor %}
     </div>
-
-    {% if paginator.total_pages > 1 %}
-    <nav class="px-4 py-3 flex items-center justify-between sm:px-6">
-        <div class="flex-1 flex justify-between sm:justify-end">
-        {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path }}" class="relative inline-flex items-center px-4 py-2 bg-secondary text-sm leading-5 text-gray-50 font-medium rounded-md transition ease-in-out duration-150">
-                Previous
-            </a>
-        {% else %}
-            <button disabled class="relative inline-flex items-center px-4 py-2 bg-secondary text-sm leading-5 font-medium rounded-md text-gray-50 opacity-50 cursor-not-allowed">
-                Previous
-            </button>
-        {% endif %}
-        
-        {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}" class="ml-3 relative inline-flex items-center px-4 py-2 bg-secondary hover:bg-accent text-sm leading-5 font-medium rounded-md text-gray-50 transition ease-in-out duration-150">
-                Next
-            </a>
-        {% else %}
-            <button disabled class="ml-3 relative inline-flex items-center px-4 py-2 bg-secondary text-sm leading-5 font-medium rounded-md text-gray-50 opacity-50 cursor-not-allowed">
-                Next
-            </button>
-        {% endif %}
-        </div>
-    </nav>
-    {% endif %}
 </div>
