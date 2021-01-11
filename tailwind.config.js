@@ -14,5 +14,4 @@ module.exports = {
     require('@tailwindcss/ui'),
     require('@tailwindcss/typography')
   ],
-  
 }
