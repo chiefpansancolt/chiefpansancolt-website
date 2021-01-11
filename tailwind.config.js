@@ -6,12 +6,13 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      }
+      },
     },
   },
   variants: {},
   plugins: [
-    require('@tailwindcss/ui'),
-    require('@tailwindcss/typography')
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
   ],
-}
+};
