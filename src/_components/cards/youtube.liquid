@@ -29,11 +29,11 @@ variables:
 {% endif %}
 
 {% if layout == "clips" %}
-    <div class="col-span-1 h-80 flex flex-col text-center bg-white rounded-lg shadow transition-transform duration-300 ease-in-out transform sm:shadow-md md:shadow-lg hover:-translate-y-2 hover:shadow-xl">
-        <iframe height="100%" width="100%" src="{{ link }}" frameborder="0" allowfullscreen></iframe>
+    <div class="col-span-1 h-60 flex flex-col text-center bg-white rounded-lg shadow transition-transform duration-300 ease-in-out transform sm:shadow-md md:shadow-lg hover:-translate-y-2 hover:shadow-xl">
+        <iframe height="100%" width="100%" src="{{ link }}" frameborder="0" allowfullscreen class="rounded-lg"></iframe>
     </div>
 {% elsif layout == "series" %}
-    <div class="col-span-1 flex flex-col h-100 text-center bg-white rounded-lg shadow transition-transform duration-300 ease-in-out transform sm:shadow-md md:shadow-lg hover:-translate-y-2 hover:shadow-xl">
-        <iframe height="100%" width="100%" src="{{ link }}" frameborder="0" allowfullscreen></iframe>
+    <div class="col-span-1 flex flex-col h-84 text-center bg-white rounded-lg shadow transition-transform duration-300 ease-in-out transform sm:shadow-md md:shadow-lg hover:-translate-y-2 hover:shadow-xl">
+        <iframe height="100%" width="100%" src="{{ link }}" frameborder="0" allowfullscreen class="rounded-lg"></iframe>
     </div>
 {% endif %}
