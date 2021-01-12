@@ -5,7 +5,7 @@ import {definitionsFromContext} from 'stimulus/webpack-helpers';
 import TabsController from 'stimulus-tabs';
 import Prism from 'prismjs';
 
-import '../styles/index.css';
+import '../styles/index.scss';
 
 const application = Application.start();
 application.register('tabular', TabsController);
