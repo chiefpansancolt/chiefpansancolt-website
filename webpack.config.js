@@ -28,79 +28,77 @@ module.exports = {
     }),
   ],
   module: {
-    rules: [{
-      test: /\.(js|jsx)/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env'],
-          plugins: [
-            ['@babel/plugin-proposal-decorators', {
-              legacy: true,
-            }],
-            ['@babel/plugin-proposal-class-properties', {
-              loose: true,
-            }],
-            [
-              '@babel/plugin-transform-runtime',
-              {
-                helpers: false,
-              },
-            ],
-            [
-              'prismjs',
-              {
-                languages: [
-                  'markup',
-                  'css',
-                  'clike',
-                  'javascript',
-                  'bash',
-                  'crystal',
-                  'docker',
-                  'erb',
-                  'git',
-                  'graphql',
-                  'haml',
-                  'liquid',
-                  'markdown',
-                  'markup-templating',
-                  'ruby',
-                  'scss',
-                  'yaml',
-                ],
-                plugins: ['line-numbers'],
-                theme: 'okaidia',
-                css: true,
-              },
-            ],
-          ],
-        },
-      },
-    },
-    {
-      test: /\.(s[ac]|c)ss$/,
-      use: [
-        MiniCssExtractPlugin.loader,
-        'css-loader',
-        'postcss-loader',
-        {
-          loader: 'sass-loader',
+    rules: [
+      {
+        test: /\.(js|jsx)/,
+        use: {
+          loader: 'babel-loader',
           options: {
-            sassOptions: {
-              includePaths: [path.resolve(__dirname, 'src/_components')],
-            },
+            presets: ['@babel/preset-env'],
+            plugins: [
+              ['@babel/plugin-proposal-decorators', {'legacy': true}],
+              ['@babel/plugin-proposal-class-properties', {'loose': true}],
+              [
+                '@babel/plugin-transform-runtime',
+                {
+                  helpers: false,
+                },
+              ],
+              [
+                'prismjs',
+                {
+                  languages: [
+                    'markup',
+                    'css',
+                    'clike',
+                    'javascript',
+                    'bash',
+                    'crystal',
+                    'docker',
+                    'erb',
+                    'git',
+                    'graphql',
+                    'haml',
+                    'liquid',
+                    'markdown',
+                    'markup-templating',
+                    'ruby',
+                    'scss',
+                    'yaml',
+                  ],
+                  plugins: ['line-numbers'],
+                  theme: 'okaidia',
+                  css: true,
+                },
+              ],
+            ],
           },
         },
-      ],
-    },
-    {
-      test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
-      loader: 'file-loader',
-      options: {
-        outputPath: '../fonts',
-        publicPath: '../fonts',
       },
-    }],
+      {
+        test: /\.(s[ac]|c)ss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                includePaths: [path.resolve(__dirname, 'src/_components')],
+              },
+            },
+          },
+        ],
+      },
+      {
+        test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
+        loader: 'file-loader',
+        options: {
+          outputPath: '../fonts',
+          publicPath: '../fonts',
+        },
+      },
+    ],
   },
 };

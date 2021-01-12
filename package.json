@@ -61,7 +61,7 @@
     "node-sass": "^4.13.1",
     "postcss": "^8.2.4",
     "postcss-import": "^12.0.1",
-    "postcss-loader": "^3.0.0",
+    "postcss-loader": "^4.1.0",
     "sass-loader": "^8.0.2",
     "stimulus": "^1.1.1",
     "stimulus-tabs": "^1.0.5",
