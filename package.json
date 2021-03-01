@@ -74,7 +74,7 @@
   "dependencies": {
     "@tailwindcss/ui": "^0.4.0",
     "bridgetown-quick-search": "1.0.3",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.23.0",
     "stimulus-tabs": "^1.0.5",
     "tailwindcss": "^1.5.2"
   }
